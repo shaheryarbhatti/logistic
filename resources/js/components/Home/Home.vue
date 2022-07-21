@@ -161,7 +161,7 @@
                                 this.successmessage = true;
                                 this.clearSection();
                                 setTimeout(() => {
-                                  this.successmessage = false;
+                                    this.successmessage = false;
                                 }, 3000);
 
                             }
@@ -188,7 +188,7 @@
                                 this.showAddSection();
                                 this.clearSection();
                                 setTimeout(() => {
-                                  this.successmessage = false;
+                                    this.successmessage = false;
                                 }, 3000);
                             }
                         });
@@ -230,23 +230,23 @@
             CLEAR ADD SECTION
             -------------------------------------------------------------------------------*/
             clearSection() {
-              this.inputs.name = '';
-              this.inputs.qualification = '';
-              this.inputs.timing = '';
-              this.inputs.teacher_id = '';
+                this.inputs.name = '';
+                this.inputs.qualification = '';
+                this.inputs.timing = '';
+                this.inputs.teacher_id = '';
             },
 
             /*-------------------------------------------------------------------------------
             SHOW ADD SECTION
             -------------------------------------------------------------------------------*/
             showAddSection() {
-              this.inputs.name = '';
-              this.inputs.qualification = '';
-              this.inputs.timing = '';
-              this.inputs.teacher_id = '';
-              this.edit = false;
-              this.add = true;
-              this.clearSection();
+                this.inputs.name = '';
+                this.inputs.qualification = '';
+                this.inputs.timing = '';
+                this.inputs.teacher_id = '';
+                this.edit = false;
+                this.add = true;
+                this.clearSection();
             },
 
 
@@ -265,7 +265,7 @@
                                 this.message = 'Data Deleted Successfully.';
                                 this.dangermessage = true;
                                 setTimeout(() => {
-                                  this.dangermessage = false;
+                                    this.dangermessage = false;
                                 }, 3000);
                             }
                         });

@@ -14,7 +14,7 @@
                     <form>
                         <div class="form-group">
                             <label for="teacher_id">Teacher</label>
-                            <Select2 class="form-control mr-sm-2" name="teacher_id" id="teacher_id" v-model="inputs.teacher_id" :options="teacherData" :settings="{placeholder: 'Select Teacher', settingOption: value, settingOption: value }" @change="onPurposeChange($event)" :class="[{'is-invalid': errorFor('teacher_id')}]"/>
+                            <Select2 class="form-control mr-sm-2" name="teacher_id" id="teacher_id" v-model="inputs.teacher_id" :options="teacherData" :settings="{placeholder: 'Select Teacher', settingOption: value, settingOption: value }" @change="onPurposeChange($event)" :class="[{'is-invalid': errorFor('teacher_id')}]" />
                             <v-errors :errors="errorFor('teacher_id')"></v-errors>
                         </div>
 
@@ -59,49 +59,49 @@
                 <div class="col-md-12" v-if="edit">
 
                     <form>
-                      <div class="form-group">
-                          <label for="teacher_id">Teacher</label>
-                          <Select2 class="form-control mr-sm-2" name="teacher_id" id="teacher_id" v-model="inputs.teacher_id" :options="teacherData" :settings="{placeholder: 'Select Teacher', settingOption: value, settingOption: value }" @change="onPurposeChange($event)" :class="[{'is-invalid': errorFor('teacher_id')}]"/>
-                          <v-errors :errors="errorFor('teacher_id')"></v-errors>
-                      </div>
+                        <div class="form-group">
+                            <label for="teacher_id">Teacher</label>
+                            <Select2 class="form-control mr-sm-2" name="teacher_id" id="teacher_id" v-model="inputs.teacher_id" :options="teacherData" :settings="{placeholder: 'Select Teacher', settingOption: value, settingOption: value }" @change="onPurposeChange($event)" :class="[{'is-invalid': errorFor('teacher_id')}]" />
+                            <v-errors :errors="errorFor('teacher_id')"></v-errors>
+                        </div>
 
-                      <div class="form-group">
-                          <label for="classes">Class</label>
-                          <input type="text" id="classes" name="classes" class="form-control" placeholder="Enter Class" v-model="inputs.classes" :class="[{'is-invalid': errorFor('classes')}]">
-                          <v-errors :errors="errorFor('classes')"></v-errors>
-                      </div>
-                      <div class="form-group">
-                          <label for="subject">Subject</label>
-                          <input type="text" class="form-control" v-model="inputs.subject" id="subject" name="subject" placeholder="Enter Qualification" :class="[{'is-invalid': errorFor('subject')}]">
-                          <v-errors :errors="errorFor('subject')"></v-errors>
-                      </div>
+                        <div class="form-group">
+                            <label for="classes">Class</label>
+                            <input type="text" id="classes" name="classes" class="form-control" placeholder="Enter Class" v-model="inputs.classes" :class="[{'is-invalid': errorFor('classes')}]">
+                            <v-errors :errors="errorFor('classes')"></v-errors>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <input type="text" class="form-control" v-model="inputs.subject" id="subject" name="subject" placeholder="Enter Qualification" :class="[{'is-invalid': errorFor('subject')}]">
+                            <v-errors :errors="errorFor('subject')"></v-errors>
+                        </div>
 
-                      <div class="form-group">
-                          <label for="timing">Timing</label>
-                          <input type="text" class="form-control" v-model="inputs.timing" id="timing" name="timing" placeholder="Enter Timing" :class="[{'is-invalid': errorFor('timing')}]">
-                          <v-errors :errors="errorFor('timing')"></v-errors>
-                      </div>
+                        <div class="form-group">
+                            <label for="timing">Timing</label>
+                            <input type="text" class="form-control" v-model="inputs.timing" id="timing" name="timing" placeholder="Enter Timing" :class="[{'is-invalid': errorFor('timing')}]">
+                            <v-errors :errors="errorFor('timing')"></v-errors>
+                        </div>
 
-                      <div class="form-group">
-                          <label for="duration">Duration</label>
-                          <input type="text" class="form-control" v-model="inputs.duration" id="duration" name="duration" placeholder="Enter Duration" :class="[{'is-invalid': errorFor('duration')}]">
-                          <v-errors :errors="errorFor('duration')"></v-errors>
-                      </div>
-                      <div class="form-group" v-if="inputs.breakoroff == 1">
-                          <label for="duration">Break / Off</label>
-                          <input type="checkbox" v-model="inputs.breakoroff" id="breakoroff" checked name="breakoroff">
+                        <div class="form-group">
+                            <label for="duration">Duration</label>
+                            <input type="text" class="form-control" v-model="inputs.duration" id="duration" name="duration" placeholder="Enter Duration" :class="[{'is-invalid': errorFor('duration')}]">
+                            <v-errors :errors="errorFor('duration')"></v-errors>
+                        </div>
+                        <div class="form-group" v-if="inputs.breakoroff == 1">
+                            <label for="duration">Break / Off</label>
+                            <input type="checkbox" v-model="inputs.breakoroff" id="breakoroff" checked name="breakoroff">
 
-                      </div>
-                      <div class="form-group" v-if="inputs.breakoroff == 0">
-                          <label for="duration">Break / Off</label>
-                          <input type="checkbox" v-model="inputs.breakoroff" id="breakoroff" name="breakoroff">
+                        </div>
+                        <div class="form-group" v-if="inputs.breakoroff == 0">
+                            <label for="duration">Break / Off</label>
+                            <input type="checkbox" v-model="inputs.breakoroff" id="breakoroff" name="breakoroff">
 
-                      </div>
-                      <div class="form-group">
-                          <label for="duration">Break / Off Text</label>
-                          <input type="text" class="form-control" v-model="inputs.text" id="text" name="text" placeholder="Enter Text">
+                        </div>
+                        <div class="form-group">
+                            <label for="duration">Break / Off Text</label>
+                            <input type="text" class="form-control" v-model="inputs.text" id="text" name="text" placeholder="Enter Text">
 
-                      </div>
+                        </div>
 
                         <a href="javascript:void(0)" @click="updateTeacherData" class="btn btn-primary">Update</a>
                         <a href="javascript:void(0)" @click="showAddSection" class="btn btn-primary">Add</a>
@@ -227,7 +227,7 @@
                                 this.message = 'Data Added Successfully.';
                                 this.successmessage = true;
                                 setTimeout(() => {
-                                  this.successmessage = false;
+                                    this.successmessage = false;
                                 }, 3000);
 
                             }
@@ -253,7 +253,7 @@
                                 this.successmessage = true;
                                 this.showAddSection();
                                 setTimeout(() => {
-                                  this.successmessage = false;
+                                    this.successmessage = false;
                                 }, 3000);
                             }
                         });
@@ -284,17 +284,17 @@
             /*-------------------------------------------------------------------------------
             SHOW EDIT SECTION
             -------------------------------------------------------------------------------*/
-            showEditSection(classes, subject, timing, teacher_id,schedule_id,duration,breakoroff,text) {
+            showEditSection(classes, subject, timing, teacher_id, schedule_id, duration, breakoroff, text) {
                 this.inputs.classes = classes;
                 this.inputs.subject = subject;
                 this.inputs.timing = timing;
                 this.inputs.teacher_id = teacher_id;
                 this.inputs.schedule_id = schedule_id;
                 this.inputs.duration = duration;
-                if(breakoroff == 0){
-                  this.inputs.breakoroff = '';
-                }else{
-                  this.inputs.breakoroff = breakoroff;
+                if (breakoroff == 0) {
+                    this.inputs.breakoroff = '';
+                } else {
+                    this.inputs.breakoroff = breakoroff;
                 }
                 this.inputs.text = text;
                 this.edit = true;
@@ -348,7 +348,7 @@
                                 this.message = 'Data Deleted Successfully.';
                                 this.dangermessage = true;
                                 setTimeout(() => {
-                                  this.dangermessage = false;
+                                    this.dangermessage = false;
                                 }, 3000);
                             }
                         });
